@@ -1,0 +1,7 @@
+component: express
+name: server
+
+inputs:
+  src: ./
+  env:
+    db: ${output:db.name}

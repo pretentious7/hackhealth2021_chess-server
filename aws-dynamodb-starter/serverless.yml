@@ -1,0 +1,13 @@
+component: aws-dynamodb
+name: db
+
+inputs:
+  deletionPolicy: delete # allows table to be removed. This property is a safe guard.
+  region: us-east-1
+  name: ${name}-${stage}
+  attributeDefinitions:
+    - AttributeName: gameID
+      AttributeType: S
+  keySchema:
+    - AttributeName: gameID
+      KeyType: HASH
